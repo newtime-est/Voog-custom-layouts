@@ -1,0 +1,395 @@
+/* SCOPES
+** ========================================================================== */
+/* Default scope
+	--------------------------------------------------------------------------- */
+	* {
+		box-sizing: border-box;
+	}
+
+	html, body {
+		position: relative;
+		padding: 0;
+		margin: 0;
+		height: 100% !important;
+		width: 100%;
+	}
+
+	html {
+		min-height: 100%;
+		overflow-x: hidden;
+	}
+
+	body {
+		min-width: 300px;
+		font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		display: block;
+		font-weight: normal;
+		line-height: 1.4;
+	}
+
+	h1 {
+		font-size: 36px;
+	}
+
+	h2 {
+		font-size: 32px;
+	}
+
+	h3 {
+		font-size: 30px;
+	}
+
+	b {
+		font-family: "open_sansbold", "Helvetica Neue", Helvetica, arial, sans-serif;
+	}
+
+	strong, b {
+		font-family: "open_sanssemibold";
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	i, em {
+		font-family: "open_sansitalic";
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	a {
+		font-weight: normal;
+		font-style: normal;
+		text-decoration: none;
+	}
+
+	img {
+		display: inline-block;
+		max-width: 100%;
+		height: auto;
+	}
+
+
+/* WRAPPER
+** ========================================================================== */
+/* Wrapper
+	--------------------------------------------------------------------------- */
+	.wrapper {
+		position: relative;
+		height: 100%;
+	}
+
+
+/* MAIN STYLES
+** ========================================================================== */
+/* Main
+	--------------------------------------------------------------------------- */
+	.main {
+		max-width: 1050px;
+		margin: 0 auto;
+	}
+
+	.no-overflow .main {
+		height: 100%;
+		overflow-y: scroll;
+	}
+
+	.main--full-width {
+		max-width: none;
+	}
+
+
+	.main--with-sidemenu {
+		position: absolute;
+		top: 0;
+		left: 300px;
+		right: 0;
+	}
+
+	.main__content {
+		margin-bottom: 15px;
+	}
+
+
+/* SIDEMENU
+** ========================================================================== */
+/* Sidemenu block
+	--------------------------------------------------------------------------- */
+	.sidemenu {
+		width: 300px;
+		padding: 15px;
+	}
+
+
+/* CUSTOM BOOTSTRAP
+** ========================================================================== */
+/* Custom Bootstrap container
+	--------------------------------------------------------------------------- */
+	.container {
+		position: relative;
+		margin-right: auto;
+		margin-left: auto;
+		padding-right: 15px;
+		padding-left: 15px;
+		z-index: 1;
+	}
+	.container:before,
+	.container:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+/* Custom Bootstrap row
+	--------------------------------------------------------------------------- */
+	.custom-row {
+		margin: 0 -15px;
+	}
+	.custom-row:before, .custom-row:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+/* Custom Bootstrap offset
+	--------------------------------------------------------------------------- */
+	@media (min-width: 768px) {
+		.custom-col-sm-offset-1 {
+			margin-left: 8.33333%;
+		}
+
+		.custom-col-sm-offset-5 {
+			margin-left: 41.66666%;
+		}
+
+		.custom-col-sm-offset-6 {
+			margin-left: 50%;
+		}
+	}
+
+	@media (min-width: 992px) {
+		.custom-col-md-offset-1 {
+			margin-left: 8.33333%;
+		}
+
+		.custom-col-md-offset-6 {
+			margin-left: 50%;
+		}
+	}
+/* Custom Bootstrap hidden columns
+	--------------------------------------------------------------------------- */
+	.hidden-sm {
+		display: none;
+	}
+
+	@media (max-width: 479px) {
+		.hidden-xs { display: none; }
+	}
+
+	@media (max-width: 991px) {
+		.hidden-md { display: none; }
+	}
+
+	@media (min-width: 480px) {
+		.visible-xs { display: none; }
+	}
+
+	@media (min-width: 768px) {
+		.visible-sm {
+			display: none;
+		}
+
+		.hidden-sm {
+			display: block;
+		}
+	}
+
+	@media (min-width: 992px) {
+		.visible-md {
+			display: none;
+		}
+	}
+/* Custom Bootstrap columns
+	--------------------------------------------------------------------------- */
+	.custom-col {
+		padding: 0 15px;
+	}
+
+	.custom-col-sm-1,
+	.custom-col-sm-2,
+	.custom-col-sm-3,
+	.custom-col-sm-4,
+	.custom-col-sm-5,
+	.custom-col-sm-6,
+	.custom-col-sm-7,
+	.custom-col-sm-8,
+	.custom-col-sm-9,
+	.custom-col-sm-10,
+	.custom-col-sm-11,
+	.custom-col-sm-12,
+	.custom-col-md-1,
+	.custom-col-md-2,
+	.custom-col-md-3,
+	.custom-col-md-4,
+	.custom-col-md-5,
+	.custom-col-md-6,
+	.custom-col-md-7,
+	.custom-col-md-8,
+	.custom-col-md-9,
+	.custom-col-md-10,
+	.custom-col-md-11,
+	.custom-col-md-12 {
+		padding: 0 15px;
+	}
+
+
+
+	.custom-col-xs-12 {
+		float: left;
+		width: 100%;
+	}
+
+	.custom-col-xs-8 {
+		float: left;
+		width: 66.66666%;
+	}
+
+	.custom-col-xs-6 {
+		float: left;
+		width: 50%;
+	}
+
+	.custom-col-xs-4 {
+		float: left;
+		width: 33.33333%;
+	}
+
+	.custom-col-xs-offset-3 {
+		margin-left: 25%;
+	}
+
+	@media (min-width: 768px) {
+		.custom-col-sm-12 {
+			float: left;
+			width: 100%;
+		}
+
+		.custom-col-sm-10 {
+			float: left;
+			width: 83.33333%;
+		}
+
+		.custom-col-sm-9 {
+			float: left;
+			width: 75%;
+		}
+
+		.custom-col-sm-8 {
+			float: left;
+			width: 66.66666%;
+		}
+
+		.custom-col-sm-7 {
+			float: left;
+			width: 58.33333%;
+		}
+
+		.custom-col-sm-6 {
+			float: left;
+			width: 50%;
+		}
+
+		.custom-col-sm-5 {
+			float: left;
+			width: 41.66666%;
+		}
+
+		.custom-col-sm-4 {
+			float: left;
+			width: 33.33333%;
+		}
+
+		.custom-col-sm-3 {
+			float: left;
+			width: 25%;
+		}
+
+		.custom-col-sm-offset-3 {
+			margin-left: 25%;
+		}
+	}
+
+	@media (min-width: 992px) {
+		.custom-col-md-12 {
+			float: left;
+			width: 100%;
+		}
+
+		.custom-col-md-10 {
+			float: left;
+			width: 83.33333%;
+		}
+
+		.custom-col-md-9 {
+			float: left;
+			width: 75%;
+		}
+
+		.custom-col-md-8 {
+			float: left;
+			width: 66.66666%;
+		}
+
+		.custom-col-md-7 {
+			float: left;
+			width: 58.33333%;
+		}
+
+		.custom-col-md-6 {
+			float: left;
+			width: 50%;
+		}
+
+		.custom-col-md-5 {
+			float: left;
+			width: 41.66666%;
+		}
+
+		.custom-col-md-4 {
+			float: left;
+			width: 33.33333%;
+		}
+
+		.custom-col-md-3 {
+			float: left;
+			width: 25%;
+		}
+
+		.custom-col-md-offset-3 {
+			margin-left: 25%;
+		}
+	}
+/* Modular framework items
+	--------------------------------------------------------------------------- */
+	.clear:before,
+	.clear:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	.hidden {
+		position: absolute;
+		display: inline-block;
+		width: 0;
+		height: 0;
+		opacity: 0;
+	}
+
+	.no-overflow {
+		overflow: hidden;
+	}
